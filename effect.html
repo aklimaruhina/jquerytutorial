@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+
+	<title>Document</title>
+	<style>
+		 div.hidecontent{
+            width: 100%;
+			padding: 10px 20px;
+			margin: 10px;
+			border: 2px solid green;
+			font-size: 20px;
+		}
+           
+        .b1 {
+            margin: 10px;
+        }
+        .hide2{width: 100%;display: block;float: left;margin-bottom: 20px;}
+        .hide2 div{
+        	background: #ece023;
+		    width: 30px;
+		    height: 40px;
+		    margin: 2px;
+		    float: left;
+		  
+        }
+        #outer {
+          border: 1px solid black;
+          padding-top: 40px;
+          height: 140px;
+          width: 100%;
+          background: green;
+          display: none;
+        }
+	</style>
+</head>
+<body>
+	<div class="container">
+		<p>Jquery Effects button hide, show, toggle</p>
+		<div class="hidecontent">
+	        <p class="hid">Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Maxime itaque nesciunt accusantium.</p>
+	    </div>
+	    <!-- click on this button and above paragraph will disappear -->
+    	<button class="b1">Click me !</button>
+	    <br>
+	    <div class="hide2">
+	    	<div></div>
+	    </div>
+	    <br>
+	    <div id="outer">
+	    	<h1>Lorem ipsum dolor sit amet.</h1>
+	    </div>
+	    <button id = "btn"> 
+		    Show
+		</button> 
+
+   		<hr>
+   		<p>This one for u sing animate function</p>
+ 		<p id = "p1"> Please keep on scrolling down as much you want... Please keep on scrolling down as much you want...  </p>
+   		<br>
+   		<div class="togglecontent"><p class="normal">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias quam porro, qui vitae nam dolores facilis ad? Quod ad temporibus, rerum pariatur. Dolore voluptatem sint velit nulla eius ipsa obcaecati accusantium, quod sit facere ipsum, nemo quia, reprehenderit impedit commodi, consequuntur quam magnam aut quisquam. Maxime explicabo error magni excepturi. Et repellendus architecto minus odio accusantium voluptates, qui velit aspernatur pariatur a, beatae! Recusandae quasi aut omnis, soluta. Quam laborum blanditiis dolore harum aliquam ducimus possimus, commodi sint molestias? Provident fuga natus consequatur distinctio, neque eius. Temporibus, animi debitis beatae nobis tempora vitae, eos dolore distinctio quidem iure consequuntur quibusdam.</p>
+   			<p class="fast">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, sed?</p>
+   			<p class="very-fast">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, sapiente.</p>
+   			<p class="slow">Lorem ipsum, dolor sit amet, consectetur adipisicing elit. Laboriosam veritatis distinctio harum.</p>
+   			<p class="very-slow">Lorem ipsum dolor sit amet, consectetur adipisicing, elit. Quisquam eius autem aliquam?</p>
+   		</div>
+   		<button class="togglebtn">Hide/show</button>
+
+   		<br>
+   		<p class="para">Jquery Fadein/ Fadeout/ fadetoggle. It used speed,  easing and callback method. speed include milliseconds, slow,fast. easing include swing, linear. The fadeTo() method gradually changes the opacity, for selected elements, to a specified opacity (fading effect).</p>
+   		<button class="btn1">Fade out</button>
+		<button class="btn2">Fade in</button>
+		<button class="btn3">Fadein with callback</button>
+		<button class="btn4">Fade to</button>
+		<hr>
+		<h4>Syntax of jQuery FadeToggle Animation Effect Method</h4>
+		<p>$(selector).fadeToggle();  
+ $(selector).fadeToggle(speed, callback);  
+ $(selector).fadeToggle(speed, easing, callback);</p>
+ <button class="btn5">Click here for fade toggle</button><br><br>
+ <div style="display: flex;">
+ 	<div id="first" style="width:100px;height:100px;background-color:yellow;"></div><br> 
+<div id="second" style="width:100px;height:100px;background-color:red;"></div><br>  
+<div id="third" style="width:100px;height:100px;background-color:green;"></div>  
+ </div>  
+ 
+
+
+<p>Testing with slidedown animation</p>
+<style type="text/css">
+	.overlay{
+		position: fixed;
+		top: 0;
+		left:0;
+		width: 100%;
+		height: 0;
+		background: rgba(0,0,0, .5);
+		transition: 0.5s ease;
+		
+		z-index: 1;
+		overflow-x: hidden;
+	}
+	.overlay.open{height: 100%}
+	.overlay-content{
+		position: relative;
+		top: 40%;
+		transform: translateX(-50%,-50%);
+		color: #fff;
+		margin: auto;
+		text-align: center;
+		font-size: 28px;
+		width: 50%;height: auto;
+	}
+	.overlay .closebtn {
+	  	position: absolute;
+	  top: 20px;
+	  right: 45px;
+	  font-size: 60px;
+	  color: #fff;
+	  text-decoration: none;
+	}
+</style>
+<div id="myNav" class="overlay">
+
+  <!-- Button to close the overlay navigation -->
+  <a href="javascript:void(0)" class="closebtn">&times;</a>
+
+  <!-- Overlay content -->
+  <div class="overlay-content">
+  	<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem numquam dolor aperiam voluptate, incidunt.</p>
+  </div>
+
+</div>
+
+
+<!-- Use any element to open/show the overlay navigation menu -->
+<button class="opnbtn">Open</button>
+<button onclick="scrollAnimated()">Go Top</button>
+<br>
+<style>.animation{margin: 15px;width: 300px;height: 200px;}</style>
+<div style="display: flex;position: relative;">
+	<img class="left-right animation" src="flower-1.jpg"/>
+	<img class="right-left animation" src="flower-2.jpg"/>
+</div>
+<p>Lorem ipsum, dolor sit, amet consectetur adipisicing elit. Earum incidunt cumque quidem molestiae mollitia omnis maxime inventore recusandae cupiditate deleniti.</p>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('.b1').click(function(e){
+				e.preventDefault();
+				$("p.hid").hide(1000, function() {
+					$('.hidecontent').css("border","0");
+                    alert("Hide method has finished its working!");
+                });
+			});
+			for ( var i = 0; i < 5; i++ ) {
+			  $( "<div>" ).appendTo($('.hide2'));
+			}
+			$( ".hide2 div" ).click(function() {
+			  $( this ).hide( 2000, function() {
+			    $( this ).remove();
+			  });
+			});
+			$("#btn").on('click', function() {
+                $("#outer").show("swing");
+            });
+
+			$('.togglebtn').on('click', function(){
+				$("p.normal").toggle();
+		        $("p.fast").toggle("fast");
+		        $("p.slow").toggle("slow");
+		        $("p.very-fast").toggle(50);
+		        $("p.very-slow").toggle(2000);
+			});
+			$('.btn1').click(function(){
+				alert("this will fade out your content");
+				$("p.para").fadeOut(1000);
+			})
+			$('.btn2').click(function(){
+				$("p.para").fadeIn(1000);
+			});
+			 $(".btn3").click(function(){
+			    $("p.para").fadeOut(1000, function(){
+			      alert("fadeOut() method is finished!");
+			    });
+			  });
+			 $('.btn4').click(function(){
+			 	$(".para").fadeTo(1000, 0.4);
+			 });
+			 $(".btn5").click(function(e){
+			 	e.preventDefault();  
+		        $("#first").fadeToggle();  
+		        $("#second").fadeToggle("slow");  
+		        $("#third").fadeToggle(3000,function(){
+		            alert("The fade-toggle effect is completed click again on button.");
+		        });  
+		    });  
+			 $('.opnbtn').on('click', function(e){
+			 	// $('.overlay').slidedown('100').css("width", "100%");
+			 	$(".overlay").slideDown(400).delay(800).fadeIn(400).addClass('open');
+			 });
+			 $('.closebtn').on('click', function(){
+			 	$('.overlay').slideUp( 500 ).fadeIn( 400 ).removeClass("open");
+			 });
+			 $(window).scroll( function(){
+			 	var scrollTop = $(window).scrollTop();
+			 	if( scrollTop >= 50){
+				$( "#p1" ).animate( { width : "60%",
+					opacity : 0.5,
+					marginLeft : "0.5in",
+					fontSize : "2em",
+					borderWidth : "11px"
+					}, 1500 );
+
+				
+				}else{
+						
+					$( "#p1" ).animate( { width : "100%",
+					opacity : 1,
+					marginLeft : "0",
+					fontSize : "1em",
+					borderWidth : "0px"
+					}, 1500 );
+				}
+			});
+			 $(".animation").mouseover(function(){
+			   $(this).animate({
+                  height:'300px',
+                  width:'300px',
+                })
+			 });
+
+			$(".animation").mouseout(function(){
+			   $(this).animate({
+                  height:'178px',
+                  width:'178px',
+                });
+            });
+
+
+		});
+		function scrollAnimated() {
+		$("html, body").animate({ scrollTop: "20" });
+		}
+
+		
+	</script>
+</body>
+</html>

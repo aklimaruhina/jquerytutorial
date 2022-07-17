@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<section class="animate">
+		<div class="container">
+		<h1><center>Animate jquery</center></h1>
+		<div class="d-flex flex-wrap">
+			<div class="item">
+				<p>After Clicking this button image will toggle animate</p>
+				<button id="clickme">Click Me</button>
+
+				<img src="https://via.placeholder.com/728x90.png?text=Visit+WhoIsHostingThis.com+Buyers+Guide" alt="" id="book">
+			</div>
+			<div class="item">
+
+				<img src="https://via.placeholder.com/728x90.png?text=Visit+WhoIsHostingThis.com+Buyers+Guide" alt="" id="onhover">
+			</div>
+			<div class="item">
+				<img src="https://via.placeholder.com/728x90.png?text=Visit+WhoIsHostingThis.com+Buyers+Guide" alt="">
+			</div>
+		</div>
+		</div>
+		<div class="p_addrem">
+			<h1>Add Class Attributes</h1>
+			<p>This will Adds the specified class(es) to each element in the set of matched elements.</p>
+
+			<p>Hello there</p>
+			<p>How Are you</p>
+			<p>Good Bye</p>
+		</div>
+		<div>
+			<p>This teaches multiple way for clicking button</p>
+			<button id="helloBtn">Say hello</button>
+
+		</div>
+	</section>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$( "#clickme" ).click(function() {
+			  $( "#book" ).animate({
+			    opacity: 0.25,
+			    left: "+=50",
+			    height: "toggle"
+			  }, 5000, function() {
+			    // Animation complete.
+			  });
+			});
+			$("#onhover").on('hover',function(){
+				$(this).append('text');
+			});
+			$( ".p_addrem p" ).last().addClass( "selected" );
+			$( ".p_addrem p" ).last().addClass([ "selected", "highlight" ]);
+		})
+		// Event binding using addEventListener
+		var helloBtn = document.getElementById( "helloBtn" );
+		helloBtn.addEventListener("click", function(event){
+			alert('hello');
+		}, false);
+		// Event binding using a convenience method
+		$('#helloBtn').click(function(event){
+			alert('hello');
+		});
+		$('#helloBtn').bind("click", function(e){
+			alert("hello");
+		});
+		$("#helloBtn").on('click', function(e){
+			alert("hello");
+		});
+		$( "body" ).on({
+		    click: function( event ) {
+		        alert( "Hello." );
+		    }
+		}, "button#helloBtn" );
+		$('body').on('click', '#helloBtn', function(e){
+			alert('hello');
+		});
+	</script>	
+</body>
+</html>

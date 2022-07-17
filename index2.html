@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Javascript Testing</title>
+	<link rel="stylesheet" href="style.css">
+	<style>
+		*{margin: 0, padding: 0; box-sizing: border-box;}
+		body{margin: 0 auto; max-width: 1000px;background: #fff; color: #000;padding: 50px;}
+		.text-center{text-align: center;}
+		.btn{
+			border: 1px solid #000;
+			background: #000;
+			color: #fff;
+			padding: 10px 20px;
+			display: inline-block;
+			cursor: pointer;
+		}
+		.mystyle{
+		  padding: 25px;
+		  background-color: coral;
+		  color: white;
+		  font-size: 25px;
+		}
+	</style>
+</head>
+
+
+<body>
+	<h1 class="text-center">Welcome to my website to learn more about javascript</h1>
+	<h3>Js Object</h3>
+	<p id="demo"></p>
+	<p id="demo2"></p>
+	<p id="demo3"></p>
+	<script>
+		const person = {
+			name: "aklima",
+			age: 31, 
+			profession: "developer", 
+		fullInfo: function(){
+			return this.name + ' '+ this.age + ' '+this.profession;
+		}
+	};
+	document.getElementById('demo').innerHTML = person.fullInfo();
+	const fruits = ["apple", "banana", "mango", "jackfruit"];
+	let text = "<ul>";
+	fruits.forEach(myFunction);
+
+	text += "</ul>";
+	document.getElementById("demo").innerHTML = text;
+	document.getElementById("demo2").innerHTML = fruits.toString();
+	document.getElementById("demo3").innerHTML = fruits.join(" * ");
+
+
+	function myFunction(value){
+		text+= "<li>"+value+"</li>";
+	}
+
+	</script>
+</body>
+</html>

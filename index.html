@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Javascript Testing</title>
+	<link rel="stylesheet" href="style.css">
+	<style>
+		*{margin: 0, padding: 0; box-sizing: border-box;}
+		body{margin: 0 auto; max-width: 1000px;background: #fff; color: #000;padding: 50px;}
+		.text-center{text-align: center;}
+		.btn{
+			border: 1px solid #000;
+			background: #000;
+			color: #fff;
+			padding: 10px 20px;
+			display: inline-block;
+			cursor: pointer;
+		}
+		.mystyle{
+		  padding: 25px;
+		  background-color: coral;
+		  color: white;
+		  font-size: 25px;
+		}
+	</style>
+</head>
+
+
+<body>
+	<h1 class="text-center">Welcome to my website to learn more about javascript</h1>
+	<p id="demo"></p>
+	<button class="btn" id="show" onclick="showme()">Click me</button>
+	<p id="date"></p>
+	<button class="btn" id="show" onclick="showmedate()">What is date</button>
+
+	<p class="hidepara">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis quasi est quis, animi ex deserunt laboriosam, adipisci iusto dolores ratione libero, minus hic illo asperiores! Similique, architecto nulla voluptas eum.</p>
+
+	<button class="btn" id="hideshow">Click me to show/hide paragraph</button>
+	<p></p>
+	<button class="btn" onclick="alert('Hi there');">Alert</button>
+	<br>
+	<p id="myfunction">Paragraph</p>
+	<button type="button" onclick="myFunction()">Try it</button>
+	<p>4 Ways to Declare a JavaScript Variable:</p>
+	<ul>
+		<li>var</li>
+		<li>let</li>
+		<li>const</li>
+		<li>nothing</li>
+	</ul>
+	<p>Variables are containers for storing data (storing data values).In this example, x, y, and z, are variables, declared with the let keyword:</p>
+	let x = 5;
+	let y = 6;
+	let z = x + y;
+	<p id="cardemo"></p>
+	<p>Convert Fahrenheit to celcius</p>
+	<p id="faren"></p>
+	<p id="times"></p>
+	<button onclick="document.getElementById('times').innerHTML = Date()">The time is?</button>
+	<button onclick="this.innerHTML = Date()">The time is?</button>
+
+	<script src="script.js"></script>
+	<script>
+		function toCelsius(fahrenheit) {
+		  return (5/9) * (fahrenheit-32);
+		}
+		document.getElementById("faren").innerHTML = "The Temperature is: "+toCelsius(77)+" celcius";
+		function showme(){
+			document.getElementById("demo").innerHTML = "You are welcome to visit here.";
+			document.getElementById("demo").style.fontSize = "35px";
+			document.getElementById("demo").style.color = "Blue";
+
+		}
+		function showmedate(){
+			document.getElementById('date').innerHTML = Date();
+		}
+		let btn = document.getElementById('hideshow');
+		btn.addEventListener('click', () => {
+			const para = document.getElementsByClassName('hidepara')[0];
+			// para.style.visibility  = 'hidden';
+			para.classList.toggle("mystyle");
+
+		});
+
+		function myFunction(){
+			document.getElementById('myfunction').innerHTML = "paragraph changed";
+		}
+		let a, b, c;
+		a = 4;
+		b = 6;
+		c = a+b;
+		var firstName = prompt("What is your first Name?");  //This is ask user to prompt his name
+		var lastName = prompt("What is your Last Name?"); // This is js comments
+		document.write('<p>Sum of total is:'+c+'</p>');
+		document.write('<p>Multiplication of total is:'+a*b+'</p>');
+		document.write('<p>My Name is: '+firstName + " "+lastName);
+		let carName = "Mitsubizi";
+		carName = "Sujuki";
+		document.getElementById('#cardemo').innerHTML = carName;
+	</script>
+</body>
+</html>
